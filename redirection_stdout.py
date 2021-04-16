@@ -1,5 +1,3 @@
-#redirection_stdout.py
- 
 import sys
 import tkinter as tk
  
@@ -28,12 +26,5 @@ class StdoutTkinter(tk.Tk):
         self.textbox = tk.Text(frame, wrap='word', fg="green", bg="black")
         self.textbox.pack()
  
-        ## Voici le truc, on pointe le sys.stdout vers le textbox
+        ## On pointe le sys.stdout vers le textbox
         sys.stdout = StdoutRedirector(self.textbox)
-
-
-
-        # self.consoleFrame = Frame(root)
-        # self.consoleFrame.pack(expand=1, pady=15, padx=15, fill= BOTH)
-        # self.consoleText = Text(self.consoleFrame, fg="green", bg="black",state=DISABLED)
-        # self.consoleText.pack(expand=1, fill= BOTH)
